@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+
+    --fs: 15px;
+    --ff: 'League Spartan', sans-serif;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-700: 700;
+}
+
+body {
+    background-image: url(/images/bg-pattern-top-desktop.svg), url(/images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: var(--ff);
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    padding: 2em;
+}
+
+img {
+    max-width: 100%;
+}
+
+.social__info {
+    display: flex;
+    gap: 1.5em;
+}
+
+.col {
+    width: 50%;
+}
+
+.social__title {
+    color: var(--dark-magenta);
+    font-size: 4rem;
+}
+
+.social__text {
+    margin-top: 1.5em;
+    font-size: var(--fs);
+    color: var(--dark-grayish-magenta);
+    font-size: 1.125rem;
+}
+
+.social__reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.review {
+    display: flex;
+    padding: 1em;
+    width: 75%;
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--light-grayish-magenta);
+}
+
+.review + .review {
+    margin-top: 1em;
+}
+
+.review:nth-child(2) {
+    margin-left: 2em;
+}
+
+.review:nth-child(3) {
+    margin-left: 4.5em;
+}
+
+.review__text {
+    color: var(--dark-magenta);
+    font-weight: var(--fw-700);
+}
+
+.social__people__reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5em;
+    margin-top: 4em;
+}
+
+.people__review {
+    padding: 1.5em;
+    background-color: var(--dark-magenta);
+    border-radius: 10px;
+}
+
+.people__review:nth-child(2) {
+    margin-top: 1.5em;
+    height: 100%;
+}
+
+.people__review:nth-child(3) {
+    margin-top: 3em;
+    height: 100%;
+}
+
+.person__info {
+    display: flex;
+    align-items: center;
+}
+
+.profile__img {
+    width: 15%;
+    border-radius: 100px;
+}
+
+.buyer {
+    margin-left: 1.5em;
+}
+
+.name {
+    color: var(--white);
+    font-weight: var(--fw-700);
+}
+
+.verified {
+    margin-top: .25em;
+    color: var(--soft-pink);
+}
+
+.person__review__text {
+    margin-top: 1.5em;
+    color: var(--white);
+    font-weight: var(--fw-500);
+}
+
+@media (max-width: 1000px) {
+
+    .people__review:nth-child(2), .people__review:nth-child(3) {
+        margin-top: 0;
+    }
+
+}
+
+@media (max-width: 950px) {
+
+    .social__info {
+        flex-direction: column;
+    }
+
+    .col {
+        width: 100%;
+        align-items: center;
+    }
+
+    .review {
+        margin-top: 1.5em;
+    }
+
+    .review:nth-child(2), .review:nth-child(3) {
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .review {
+        flex-direction: column;
+    }
+
+    .review:nth-child(2), .review:nth-child(3) {
+        margin-left: 0;
+    }
+
+    .people__review:nth-child(2), .people__review:nth-child(3) {
+        margin-top: 0;
+    }
+
+    .review__text {
+        margin-top: .5em;
+    }
+
+}
